@@ -1,0 +1,88 @@
+/* Original, searchable topic illustrations and procedural vector motifs. */
+const EXPANDED_ARTWORK={
+ briefcase:['work hiring job office business','<rect x="8" y="28" width="84" height="59" rx="7"/><path d="M34 28V13h32v15M8 48q42 25 84 0M44 49h12v17H44Z"/>'],
+ graduation:['school education graduate student','<path d="m4 34 46-23 46 23-46 23ZM20 43v27q30 24 60 0V43M94 36v39"/>'],
+ lotus:['wellness yoga spa lotus flower','<path d="M50 87Q8 45 50 7q42 38 0 80ZM50 87Q7 82 9 33q36 3 41 54Zm0 0q43-5 41-54-36 3-41 54Z"/>'],
+ helpinghands:['charity help care donate volunteer','<path d="M7 68h19l18-14q10-8 18 1l-17 14h22l17-15q14-5 10 8L73 86H27L7 91Zm25-36q-13-20 3-23 10-3 15 9 8-13 18-8 13 8-1 22L50 48Z"/>'],
+ clapper:['film cinema movie theatre production','<path d="M8 40h84v49H8ZM8 24 87 7l5 22L13 46ZM23 21l13 18M47 16l13 18M70 11l13 18M22 58h56M22 72h29"/>'],
+ palette:['art paint artist gallery creativity','<path d="M86 66q-22-9-24 12 1 15-20 12C-15 82 2 8 52 8c44 0 54 63 34 58Z"/><circle cx="29" cy="31" r="5"/><circle cx="50" cy="23" r="5"/><circle cx="72" cy="33" r="5"/><circle cx="24" cy="53" r="5"/>'],
+ compass:['travel adventure outdoors direction hike','<circle cx="50" cy="50" r="42"/><path d="m69 28-11 34-27 12 10-35ZM41 39l17 23M50 8v9m0 66v9M8 50h9m66 0h9"/>'],
+ tools:['tools repair handyman local services','<path d="M31 8q27 0 20 28l39 39-15 15-39-39C8 58 1 30 10 20l13 15 13-12-13-15ZM10 87l25-25M67 30l22-22 5 5-22 22-9 2Z"/>'],
+ info:['information notice help announcement','<circle cx="50" cy="50" r="41"/><path d="M46 44h8v30m-14 0h25M48 26h5v5h-5Z"/>'],
+ cutlery:['restaurant food menu dining','<path d="M18 8v24q0 16 12 16T42 32V8M30 8v83M69 91V8q-25 16-16 46h16"/>'],
+ trophy:['sport winner award champion tournament','<path d="M30 10h40v30q0 25-20 25T30 40ZM30 18H9v17q0 22 24 16M70 18h21v17q0 22-24 16M50 65v20M29 91h42M38 85h24"/>'],
+ dumbbell:['gym fitness workout sport strength','<path d="M8 35h13v30H8Zm13-13h16v56H21Zm42 0h16v56H63Zm16 13h13v30H79ZM37 43h26v14H37Z"/>'],
+ runner:['run running marathon race fitness','<circle cx="64" cy="15" r="9"/><path d="m50 33-13 22 18 12-14 25M50 33l19 19h19M50 33 31 29 16 43M55 67l17 23M37 55 20 71H5"/>'],
+ basketball:['basketball sport game team','<circle cx="50" cy="50" r="41"/><path d="M9 50h82M50 9v82M20 21q61 0 60 59M20 80q0-60 60-59"/>'],
+ tennis:['tennis racket sport game','<ellipse cx="60" cy="33" rx="24" ry="29" transform="rotate(32 60 33)"/><path d="m44 56-29 36-8-7 30-36M47 15l31 19M40 26l32 19M38 39l27 16M53 8 35 46M65 7 43 55M78 17 55 60"/>'],
+ medal:['medal award prize sport','<path d="M23 6h19l18 38H42Zm35 0h19L60 44H42Z"/><circle cx="50" cy="66" r="26"/><path d="m50 48 6 11 13 2-10 9 2 13-11-6-11 6 2-13-10-9 13-2Z"/>'],
+ key:['key house property rental real estate','<circle cx="31" cy="31" r="22"/><circle cx="31" cy="31" r="8"/><path d="m47 47 43 43M65 65l13-13M77 77l13-13"/>'],
+ building:['building office property apartments city','<path d="M18 94V8h64v86M7 94h86M42 94V73h16v21M30 23h10m20 0h10M30 39h10m20 0h10M30 55h10m20 0h10"/>'],
+ sofa:['home sofa interior furniture living','<path d="M18 50V23q32-18 64 0v27M16 44q-13 0-13 13v27h94V57q0-13-13-13t-13 13v9H29v-9q0-13-13-13ZM15 84v11m70-11v11M50 18v44"/>'],
+ lamp:['lamp light home interior decor','<path d="M30 9h40l18 47H12ZM50 56v31M28 94h44M72 57v15"/>'],
+ location:['location map pin place venue address','<path d="M50 94Q6 49 16 25c13-33 68-22 68 13 0 23-34 56-34 56Z"/><circle cx="50" cy="36" r="13"/>'],
+ handshake:['business hiring partner agreement team','<path d="m4 42 16-23 20 10 18-8 21 8 17 22-11 12-12 16-16 10-38-28ZM40 29 27 43q-4 12 10 10l14-9 28 24M49 58l21 20M39 68l17 18"/>'],
+ laptop:['computer laptop work technology career','<path d="M17 9h66v57H17ZM4 78l13-12h66l13 12v9H4ZM25 19h50v37H25Z"/>'],
+ lightbulb:['idea business creative inspiration','<path d="M32 62C-3 28 24 2 50 7c31-5 53 26 18 55v16H32ZM35 87h30M42 95h16M42 75V46l8 8 8-8v29"/>'],
+ rocket:['startup launch space technology career','<path d="M33 63Q29 16 85 6 95 61 47 70ZM34 39 11 46 7 74l28-10m28-1L56 88l-29 7 15-27M28 73 9 93"/><circle cx="64" cy="29" r="9"/>'],
+ clock:['time hours schedule notice appointment','<circle cx="50" cy="50" r="41"/><path d="M50 22v31l22 13M50 9v8m0 66v8M9 50h8m66 0h8"/>'],
+ calendar:['date calendar event schedule booking','<rect x="10" y="19" width="80" height="72" rx="7"/><path d="M10 39h80M29 7v24M71 7v24M25 54h10m15 0h10m15 0h5M25 72h10m15 0h10m15 0h5"/>'],
+ scissors:['salon hair beauty craft scissors','<circle cx="24" cy="75" r="15"/><circle cx="76" cy="75" r="15"/><path d="m34 63 48-55M66 63 18 8"/>'],
+ perfume:['beauty perfume fragrance salon','<path d="M26 38h48v55H26ZM36 20h28v18H36ZM40 8h20v12H40ZM35 53h30v22H35Z"/>'],
+ candle:['wellness spa candle mindful relaxation','<path d="M24 41h52v52H24ZM50 36Q26 17 50 4q24 17 0 32ZM24 49q10 12 17 0 10-11 17 0 10 12 18 0"/>'],
+ comb:['salon hair barber grooming','<path d="M10 8h80v26H10Zm0 26v56m10-56v56m10-56v56m10-56v56m10-56v56m10-56v56m10-56v56m10-56v56m10-56v56"/>'],
+ shield:['safety protection insurance notice security','<path d="M50 6 87 22v28q0 26-37 45Q13 76 13 50V22ZM32 48l12 13 25-27"/>'],
+ warning:['warning safety caution notice','<path d="m50 8 45 79H5ZM50 34v25m0 12v3"/>'],
+ recycle:['recycle eco environment cleanup charity','<path d="m39 13 13-7 20 34M59 31l14 10 8-15M84 49l9 15-20 28H43m12-12L42 93l13 7M32 87 9 77l3-34 16-27m-4 20L10 41 4 25"/>'],
+ globe:['globe world travel global earth charity','<circle cx="50" cy="50" r="42"/><ellipse cx="50" cy="50" rx="20" ry="42"/><path d="M8 50h84M14 29h72M14 71h72"/>'],
+ tent:['camping camp outdoor adventure tent','<path d="m50 9 45 78H5ZM50 9v78M50 39 27 87M50 39l23 48M41 9h18"/>'],
+ backpack:['backpack travel hiking school student','<path d="M20 37q0-24 30-24t30 24v55H20ZM38 13V5h24v8M30 55h40v26H30ZM20 49H8v29h12m60-29h12v29H80M37 37h26"/>'],
+ airplane:['airplane travel flight holiday trip','<path d="m47 10 7-3 7 33 32 18v8l-33-8-1 22 13 10v5l-20-5-20 5v-5l13-10-1-22-33 8v-8l32-18Z"/>'],
+ suitcase:['suitcase travel holiday luggage','<rect x="17" y="24" width="66" height="64" rx="9"/><path d="M35 24V8h30v16M31 24v64M69 24v64M28 89v7m44-7v7"/>'],
+ map:['map travel guide navigation outdoors','<path d="m5 17 30-9 30 10 30-9v74l-30 9-30-10-30 9ZM35 8v74M65 18v74M16 43l12 13 18-24 32 24 9-17"/>'],
+ theater:['theatre drama comedy performance','<path d="M12 10q23 15 47 0v39q-20 44-47 0Zm29 17q23 15 47 0v39q-20 44-47 0ZM20 29l9 3m12 0 9-3M22 48q14-14 25 0M50 48l9 3m11 0 9-3M53 65q13 15 23 0"/>'],
+ popcorn:['cinema movie film snacks popcorn','<path d="m20 38 9 55h42l9-55ZM35 40l4 50m26-50-4 50M22 38C3 26 17 9 30 18 31-1 56 0 58 14 77-1 98 24 80 38"/>'],
+ filmstrip:['film cinema movie photography','<path d="M9 8h82v84H9ZM25 8v84M75 8v84M25 34h50M25 66h50M9 22h16M9 45h16M9 70h16M75 22h16M75 45h16M75 70h16"/>'],
+ paintbrush:['paint artist art brush gallery','<path d="m38 60 41-54 14 11-44 52ZM38 60q-19-1-18 15T5 95q39 7 44-26Z"/>'],
+ easel:['art painting gallery easel','<path d="M18 17h64v52H18ZM50 17V5M29 70 13 95M71 70l16 25M50 70v25M10 70h80M28 55l16-20 14 11 14-16"/>'],
+ diamond:['diamond jewelry luxury wedding gemstone','<path d="m7 32 18-22h50l18 22-43 62ZM7 32h86M25 10l12 22 13 62 13-62 12-22M37 32l13-22 13 22"/>'],
+ crown:['crown royal party birthday award','<path d="m10 26 24 18L50 12l16 32 24-18-9 55H19ZM19 81h62v11H19Z"/>'],
+ baby:['baby shower celebration family','<circle cx="50" cy="50" r="36"/><path d="M19 42q-19-7-12 12l11 4m64-16q19-7 12 12l-11 4M34 43v5m32-5v5M35 63q15 16 30 0M50 14q-17-15-2-16 18 3 4 19"/>'],
+ umbrella:['umbrella rain travel weather outdoor','<path d="M6 48a44 44 0 0 1 88 0q-11-12-22 0-11-12-22 0-11-12-22 0-11-12-22 0ZM50 48v32q0 21 18 10M50 5V1"/>'],
+ rain:['rain weather cloud outdoor','<path d="M20 61C0 61 1 29 23 31 17-5 65-6 69 24c29-7 40 37 13 37ZM24 73l-7 18m32-18-7 18m32-18-7 18"/>'],
+ snowflake:['snowflake winter holiday weather seasonal','<path d="M50 5v90M11 27l78 46M11 73l78-46M37 13l13 13 13-13M37 87l13-13 13 13M12 42l18-4 1-18m57 38-18 4-1 18M12 58l18 4 1 18m57-38-18-4-1-18"/>'],
+ tree:['tree forest garden nature outdoor','<path d="m50 5 28 30H64l25 27H67l27 23H6l27-23H11l25-27H22ZM44 85v12h12V85"/>'],
+ cactus:['cactus desert plant botanical nature','<path d="M40 94V20q0-20 20-13v87M40 59H20Q8 59 8 44V29h14v17h18m20 24h20q12 0 12-15V38H78v18H60M27 94h46"/>'],
+ carrot:['carrot vegetable food healthy organic','<path d="M21 89 39 29q23-9 35 12ZM39 29 41 7m13 20L65 5m0 28 25-9M34 49l14 6M28 67l10 3"/>'],
+ burger:['burger restaurant food menu fast food','<path d="M10 38q0-33 40-33t40 33ZM7 49h86v13H7ZM12 75h76q0 20-38 20T12 75ZM9 67l17 6 20-7 20 7 25-8M32 23l3 2m14-8 4 1m17 6 3-2"/>'],
+ fries:['fries chips restaurant food menu','<path d="m18 40 9 53h46l9-53ZM23 40V10h12v30M43 40V4h12v36M63 40V13h12v27M37 61h26"/>'],
+ sushi:['sushi japanese restaurant food menu','<ellipse cx="50" cy="29" rx="34" ry="17"/><path d="M16 29v42c0 23 68 23 68 0V29"/><ellipse cx="50" cy="29" rx="15" ry="8"/>'],
+ cocktail:['cocktail drinks bar menu happy hour','<path d="M7 22h86L50 61ZM50 61v31M30 92h40M18 31h64M65 22 79 4h15"/>'],
+ wine:['wine drinks bar tasting menu','<path d="M29 7h42l5 30c7 39-59 39-52 0ZM50 67v26M28 93h44M25 35h50"/>'],
+ beer:['beer bar drinks festival pub','<path d="M17 28h49v59H17ZM66 38h14c22 0 16 35-14 35M17 28C0 16 18-1 28 12 36-2 54 1 56 14 76 4 82 31 66 28M31 43v28M49 43v28"/>'],
+ cupcake:['cupcake bakery birthday sweet cake','<path d="m21 53 8 40h42l8-40ZM18 53C1 38 22 27 31 34c-3-27 39-27 38 0 17-8 34 10 13 19ZM37 61l4 28m22-28-4 28M50 17V5"/>'],
+ pretzel:['pretzel bakery bread food','<path d="M50 69C-9 24 27-10 48 25l32 47c18 24-22 37-29 9L24 33C5 2 1 67 29 63l44-4c37-5 21-53-1-43-15 7-15 37-22 53Z"/>'],
+ croptop:['fashion clothing shop sale apparel','<path d="m29 12 21 8 21-8 25 24-17 18-11-9v44H32V45l-11 9L4 36ZM36 15q14 27 28 0"/>'],
+ shoe:['shoe running fashion sale sport','<path d="m12 33 24 8 12-12 12 20 31 18v20H8V57ZM8 73h83M53 46l-11 9m23-2-12 9"/>'],
+ glasses:['glasses eyewear fashion beauty','<path d="M7 42h36v18q0 24-36 0Zm50 0h36v18q0 24-36 0ZM43 49q7-10 14 0M7 43 2 21m91 22 5-22"/>'],
+ wrench:['wrench repair services tools','<path d="M69 7q26-2 24 24L77 45 61 42 22 91 9 78l45-43-3-17 15-15-3 16 17 3Z"/>'],
+ broom:['cleaning local service home broom','<path d="m62 7 12 7-27 45-12-7ZM35 52q-28-6-31 40h65Q58 64 47 59M25 61 16 91m20-29-2 30m10-27 10 27"/>'],
+ plug:['electrician electrical energy services','<path d="M25 32h50v22q0 27-25 27T25 54ZM35 32V8m30 24V8M50 81v15"/>'],
+ faucet:['plumber plumbing water repair services','<path d="M12 42h17V30h37v12h19v24H68V53H29v13H12ZM39 15h18M48 15v15M77 74q-15 20 0 21 15-1 0-21Z"/>'],
+ gear:['gear repair technical settings tools','<path d="m39 7 22 0 4 15 12 7 15-3 9 19-11 11-1 13 9 12-13 15-13-6-13 3-7 14-21-5-1-15-10-10-15 0-6-20 13-8 5-13-5-14 17-12 11 10Z"/><circle cx="50" cy="52" r="17"/>'],
+ envelope:['email contact letter invitation mail','<path d="M7 21h86v61H7ZM7 21l43 34 43-34M7 82l29-34m57 34L64 48"/>'],
+ chat:['chat message social contact conversation','<path d="M8 13h84v58H42L15 91V71H8ZM24 33h52M24 50h37"/>'],
+ megastar:['burst sticker jagged geometric abstract','<path d="m50 3 5 32 22-23-12 30 32-8-27 18 26 19-32-5 11 28-22-22-7 25-6-25-22 23 11-30-30 6 26-18L4 30l31 9-12-29 24 24Z"/>']
+};
+for(const points of [5,6,8,10,12,16,20,24]){
+ const coords=Array.from({length:points*2},(_,i)=>{const a=i*Math.PI/points-Math.PI/2,r=i%2?27:46;return `${(50+Math.cos(a)*r).toFixed(2)},${(50+Math.sin(a)*r).toFixed(2)}`;}).join(' ');
+ EXPANDED_ARTWORK[`starburst-${points}`]=[`starburst ${points} points geometric badge burst sticker`,`<polygon points="${coords}"/>`];
+}
+for(let petals=4;petals<=12;petals++){
+ const ellipses=Array.from({length:petals},(_,i)=>`<ellipse cx="50" cy="27" rx="10" ry="23" transform="rotate(${i*360/petals} 50 50)"/>`).join('');
+ EXPANDED_ARTWORK[`rosette-${petals}`]=[`rosette ${petals} petals flower floral mandala geometric`,ellipses+'<circle cx="50" cy="50" r="8"/>'];
+}
+for(const count of [3,4,5,6,7,8]){
+ EXPANDED_ARTWORK[`wave-${count}`]=['wave stripe pattern texture abstract '+count,Array.from({length:count},(_,i)=>`<path d="M5 ${10+i*75/(count-1)}q22-16 45 0t45 0"/>`).join('')];
+ EXPANDED_ARTWORK[`orbit-${count}`]=['orbit mesh ellipse pattern geometric '+count,Array.from({length:count},(_,i)=>`<ellipse cx="50" cy="50" rx="43" ry="18" transform="rotate(${i*180/count} 50 50)"/>`).join('')];
+}

@@ -1,0 +1,8 @@
+preview-*.png
+test-poster.*
+__pycache__/
+debug.log
+canvas-test.*
+design-test.*
+studio-test*
+refinement-test*
