@@ -2,17 +2,8 @@
 
 A buildless browser-based poster maker. Serve `dist/` with any static web server.
 
-## GitHub Pages
 
-The included `.github/workflows/pages.yml` publishes the contents of `dist/` directly, with no build or Node dependencies.
-
-1. In the GitHub repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-2. Commit and push the workflow and `dist/` to `main`. The workflow runs when either changes; you can also run **Deploy to GitHub Pages** manually from **Actions**.
-3. Open the URL reported by the deployment (for this repository, `https://maabra.github.io/paperplane/`).
-
-Branch-based Pages publishing only supports the repository root or `/docs`, so it cannot publish this repository's `dist/` directory directly. Use the included Actions workflow instead. All app resources use relative URLs, so the app works under the repository's `/paperplane/` path as well as on a custom domain. The `dist/.nojekyll` file marks the output as plain static files.
-
-## Current refinement
+## Current state
 
 The editor starts in **Simple editor** mode: edit the main message and supporting details, choose a design, change the picture, and download. Optional prices are folded away. Text wraps and scales automatically inside measured layout regions. The download dialog uses plain-language format and quality choices. **Advanced editor** retains selection, transforms, graphics, grouping, and layers, with clearer navigation. Mobile includes shortcuts between words, preview, and designs.
 
