@@ -5,7 +5,7 @@ class EasyStudio extends StudioCanvas {
    state.layoutRevision=3;
  }
  installEasyUI(){
-   document.querySelector('#editorPane .section-heading h2').textContent='Make it yours.';
+   document.querySelector('#editorPane .section-heading h2').textContent='Edit your poster';
    document.querySelector('#editorPane .section-heading p').textContent='Add your words, choose a look, and download your poster.';
    document.querySelector('#editorPane .section-heading').insertAdjacentHTML('afterend',`<div class="editor-navigation"><div class="editor-mode" aria-label="Editor mode"><button data-easy="mode-basic">Simple editor</button><button data-easy="mode-advanced">Advanced editor</button></div><span id="modeHint">We’ll take care of the layout.</span></div>`);
    document.querySelector('.controls').id='editorFields';document.querySelector('.canvas-area').id='editorPreview';document.querySelector('.looks').id='editorDesigns';
